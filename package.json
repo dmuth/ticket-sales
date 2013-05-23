@@ -1,0 +1,17 @@
+{
+	"name": "ticket-tracker",
+	"author": "Douglas Muth <doug.muth@gmail.com>",
+	"scripts": {
+		"test": "mocha"
+	},
+	"dependencies": {
+		"seq": "0.3.5",
+		"express": "3.2.5",
+		"log4js": "0.6.5"
+	},
+	"engines": {
+		"node": ">=0.6"
+	}
+
+}
+
