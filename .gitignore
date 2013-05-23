@@ -1,0 +1,11 @@
+
+#
+# External modules
+#
+node_modules/
+
+#
+# Vim swapfiles
+#
+*.swp
+
