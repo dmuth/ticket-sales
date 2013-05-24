@@ -2,13 +2,14 @@
 	"name": "ticket-tracker",
 	"author": "Douglas Muth <doug.muth@gmail.com>",
 	"scripts": {
-		"test": "mocha"
+		"test": "mocha -R spec -u tdd --recursive "
 	},
 	"dependencies": {
 		"seq": "0.3.5",
 		"express": "3.2.5",
 		"log4js": "0.6.5",
-		"mocha": "1.10.0"
+		"mocha": "1.10.0",
+		"should": "1.2.2"
 	},
 	"engines": {
 		"node": ">=0.6"
