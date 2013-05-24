@@ -55,3 +55,14 @@ This is a standard Javascript object:
 - `/seat/unlock/:section/:row/:seat` - Unlock a seat
 - `/seat/num_available` - How many seats are available?
 
+
+## Future enchancements
+
+- Find rows of seats that are together
+
+
+## Scaling up
+
+This will work only on a single server for now.  In the future, I would look into using Dyanmo DB
+instead of internal data structures for storing event seats.  The round trip time to Dynamo should 
+be on the order of 1-2 milliseconds, which is plenty fast enough for intended use.
