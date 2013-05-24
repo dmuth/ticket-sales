@@ -46,5 +46,12 @@ This is a standard Javascript object:
     }
 
 
+## HTTP API Endpoints
 
+- `/` - Hello world!
+- `/seat/check/:section/:row/:seat` - Check if a certain seat is available
+- `/seat/lock/:section/:row/:seat` - Lock a certain seat
+- `/seat/claim/:section/:row/:seat` - Claim a locked seat that has been sold externally
+- `/seat/unlock/:section/:row/:seat` - Unlock a seat
+- `/seat/num_available` - How many seats are available?
 
