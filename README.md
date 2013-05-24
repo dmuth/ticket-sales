@@ -27,5 +27,24 @@ To start the server:
 
     node ./main.js
     
+## Event data structure
 
-    
+This is a standard Javascript object:
+
+    {
+    name: "name of the event",
+    _comment: "Comment for programmers inspecting this data structure",
+    sections: { 
+        orchestra: { // A sample section. We can have as many of these as we want.
+            a: { // Row A. This can be an arbitrary string.
+                "1": { // Our individual seat
+                    status: "available" // By default the status is available.  Can also be "locked" and "sold"
+                    expires: (integer) // When a locked seat expires. This is a time_t.
+                }
+            }
+        }
+    }
+
+
+
+
