@@ -59,7 +59,8 @@ suite("event", function() {
 	* Set up and populate our event object before each test.
 	*/
 	setup(function(done) {
-		//log.setLevel("debug"); // Debugging
+// TEST
+		log.setLevel("debug"); // Debugging
 		eventObject = event.new(data);
 		done();
 	});
@@ -118,9 +119,12 @@ suite("event", function() {
 		// We're going to test unlockSeats(), which will be called 
 		// periodically when running as a webserver.
 		//
-		var result = eventObject.lockSeat("orchestra", "b", "3");
+		// Let's set the TTL to the *past*, so that unlockSeats()
+		// always works.
+		//
+		var result = eventObject.lockSeat("orchestra", "b", "3", -100);
 		result.should.be.true;
-		var result = eventObject.lockSeat("orchestra", "b", "7");
+		var result = eventObject.lockSeat("orchestra", "b", "7", -100);
 		result.should.be.true;
 		var result = eventObject.getNumSeats();
 		result.should.equal(9);
